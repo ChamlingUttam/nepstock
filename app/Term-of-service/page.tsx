@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 
-export default function PrivacyPolicyPage() {
+export default function TermOfServicePage() {
   return (
     <main className="min-h-screen bg-white">
       <section className="mx-auto max-w-[1280px] px-6 py-8 sm:px-8 lg:px-10">
@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
               6. Liability
             </h2>
             <p className="text-[11px] leading-5 text-[#526174]">
-             We're not liable for business decisions based on platform data. Maximum liability limited to fees paid.
+             We are not liable for business decisions based on platform data. Maximum liability limited to fees paid.
             </p>
           </section>
         </div>
