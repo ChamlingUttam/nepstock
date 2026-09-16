@@ -59,8 +59,8 @@ export default function TermOfServicePage() {
             <h2 className="mb-3 text-lg md:text-xl font-bold text-gray-900">
               6. Liability
             </h2>
-            <p className="text-[11px] leading-5 text-[#526174]">
-             We're not liable for business decisions based on platform data. Maximum liability limited to fees paid.
+            <p className="text-[15px] leading-5 text-[#526174]">
+             We are not liable for business decisions based on platform data. Maximum liability limited to fees paid.
             </p>
           </section>
         </div>

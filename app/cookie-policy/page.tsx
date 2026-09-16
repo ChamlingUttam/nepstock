@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function CookiePolicyPage(){
     return(
         <main className="min-h-screen bg-white">
-            <section className="mx-auto max-w-7xl px-4 py-12 md:px-12 lg:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:px-12 lg:py-16">
         <h1 className="mb-8 text-2xl md:text-3xl font-bold text-gray-900">
-          Cookie Policy
+          Cookies Policy
         </h1>
 
         <div className="space-y-8 text-gray-700">
@@ -61,7 +61,7 @@ export default function CookiePolicyPage(){
               6. Policy Updates
             </h2>
             <p className="text-[15px] leading-relaxed text-gray-600">
-                We'll update this policy as needed. Continued use of StockNep means you accept any updated cookie policy.
+                We will update this policy as needed. Continued use of StockNep means you accept any updated cookie policy.
             </p>
         </section>
     
