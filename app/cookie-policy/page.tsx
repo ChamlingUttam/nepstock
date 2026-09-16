@@ -1,69 +1,72 @@
+
 import Link from "next/link";
 
-export default function PrivacyPolicyPage() {
-  return (
-    <main className="min-h-screen bg-white">
-      <section className="mx-auto max-w-7xl px-4 py-12 md:px-12 lg:py-16">
+export default function CookiePolicyPage(){
+    return(
+        <main className="min-h-screen bg-white">
+            <section className="mx-auto max-w-7xl px-4 py-12 md:px-12 lg:py-16">
         <h1 className="mb-8 text-2xl md:text-3xl font-bold text-gray-900">
-          Privacy Policy
+          Cookie Policy
         </h1>
 
         <div className="space-y-8 text-gray-700">
           <section>
             <h2 className="mb-3 text-lg md:text-xl font-bold text-gray-900">
-              1. Overview
+              1. What are Cookies?
             </h2>
             <p className="text-[15px] leading-relaxed text-gray-600">
-              We collect minimal data needed to provide our inventory management services. Your business data belongs to you and is protected with industry-standard security.
+                Cookies are small text files stored on your device when you visit websites. They help websites remember your preferences and improve your experience.
             </p>
           </section>
 
           <section>
             <h2 className="mb-3 text-lg md:text-xl font-bold text-gray-900">
-              2. Data We Collect
+              2. How We Cookies?
             </h2>
             <p className="text-[15px] leading-relaxed text-gray-600">
-              Business information (inventory, sales, customers), account details, and technical data. We never sell your data to third parties.
+                We use cookies to keep you logged in, remember your settings, understand how you use StockNep, and improve our platform's performance.
             </p>
           </section>
 
           <section>
             <h2 className="mb-3 text-lg md:text-xl font-bold text-gray-900">
-              3. How We Use Data
+              3. Type of Cookies we use
             </h2>
             <p className="text-[15px] leading-relaxed text-gray-600">
-              To provide and improve our services, process payments, send updates, and ensure security. We use anonymized data for analytics.
+                Essential cookies (required for platform to work), functional cookies (remember preferences), and analytics cookies (help us improve).
             </p>
           </section>
 
           <section>
             <h2 className="mb-3 text-lg md:text-xl font-bold text-gray-900">
-              4. Data Protection
+              4. Controlling Cookies
             </h2>
             <p className="text-[15px] leading-relaxed text-gray-600">
-              256-bit SSL encryption, regular security audits, and secure servers in Nepal. Daily backups ensure your data is always safe.
+                You can control cookies through your browser settings. Disabling essential cookies may affect StockNep's functionality.
             </p>
           </section>
 
           <section>
             <h2 className="mb-3 text-lg md:text-xl font-bold text-gray-900">
-              5. Your Rights
+              5. Third-party Cookies
             </h2>
             <p className="text-[15px] leading-relaxed text-gray-600">
-              Access your data, request corrections, download your information, or delete your account. Contact us for any data requests.
+                We use trusted third-party services (like analytics) that may place cookies. We don't control these directly.
             </p>
-          </section>
+        </section>
 
-          <section>
+
+        <section>
             <h2 className="mb-3 text-lg md:text-xl font-bold text-gray-900">
-              6. Contact Us
+              6. Policy Updates
             </h2>
             <p className="text-[15px] leading-relaxed text-gray-600">
-              For privacy questions or data requests, email privacy@stocknep.com. We respond within 48 hours.
+                We'll update this policy as needed. Continued use of StockNep means you accept any updated cookie policy.
             </p>
-          </section>
+        </section>
+    
         </div>
-      </section>
-    </main>
-  );
+        </section>
+        </main>
+    )
 }
