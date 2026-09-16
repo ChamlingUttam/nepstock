@@ -3,23 +3,22 @@
 import React from "react";
 import { Button } from "../ui/button";
 
-const TailSection = () => {
+const MainHeader = () => {
   return (
-    <div className="flex w-full justify-center px-4 py-5 sm:px-6 md:px-10 lg:px-16 xl:px-20">
-      <section className="flex w-full max-w-7xl flex-col items-center justify-center rounded-2xl bg-[#E6F2FF] px-5 py-12 text-center sm:px-8 sm:py-14 md:px-12 md:py-16 lg:px-16 lg:py-20">
+    // <div className="flex w-full justify-center px-4 py-5 sm:px-6 md:px-10 lg:px-16 xl:px-20">
+      <header className="flex w-full max-w-7xl flex-col items-center justify-center rounded-2xl  px-5 py-12 text-center sm:px-8 sm:py-14 md:px-12 md:py-16 lg:px-16 lg:py-20">
         <p className="text-sm font-semibold text-[#075BFF] sm:text-base">
           Nepal's #1 Inventory Management Platform
         </p>
 
         <h1 className="mt-4 text-3xl font-bold text-black sm:text-4xl md:text-5xl lg:text-6xl">
-          Ready to Transform <br />
-          Your Business?
+          Simplify Your Shop  <br />
+          Inventory Like <span className="text-[#075BFF]">Never Before</span>
         </h1>
 
         <p className="mt-4 max-w-2xl text-sm font-medium leading-6 text-gray-400 sm:text-base">
-          Join hundreds of Nepali businesses who transformed their
-          <br className="hidden sm:block" />
-          inventory management with StockNep
+         Track stock levels, manage suppliers, and grow your business with StockNep's all-in-one inventory
+          management solution. Perfect for Nepali businesses.
         </p>
 
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
@@ -34,9 +33,9 @@ const TailSection = () => {
             BOOK A DEMO
           </Button>
         </div>
-      </section>
-    </div>
+      </header>
+    // </div>
   );
 };
 
-export default TailSection;
+export default MainHeader;
