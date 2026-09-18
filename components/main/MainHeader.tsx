@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 const MainHeader = () => {
   return (
     // <div className="flex w-full justify-center px-4 py-5 sm:px-6 md:px-10 lg:px-16 xl:px-20">
-      <header className="flex w-full max-w-7xl flex-col items-center justify-center rounded-2xl  px-5 py-12 text-center sm:px-8 sm:py-14 md:px-12 md:py-16 lg:px-16 lg:py-20">
+      <header className="flex w-full  flex-col items-center justify-center rounded-2xl  px-5 py-12 text-center sm:px-8 sm:py-14 md:px-12 md:py-16 lg:px-16 lg:py-20">
         <p className="text-sm font-semibold text-[#075BFF] sm:text-base">
           Nepal's #1 Inventory Management Platform
         </p>

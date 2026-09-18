@@ -10,8 +10,8 @@ const Left = () => {
   return (
     <div>
         <header className='flex flex-col '> 
-            <div className='flex gap-2 text-[#057BFF]'>
-                <span><FaRegChartBar size={20}/></span>
+            <div className='flex gap-2 items-center text-[#057BFF]'>
+                <span className='w-8 h-8 rounded-xl flex items-center justify-center bg-[#C2DFFF] text-[#057BFF]'><FaRegChartBar size={20}/></span>
                 <span>Reports & Analytics</span>
             </div>
 

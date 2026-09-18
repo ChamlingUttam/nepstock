@@ -78,14 +78,14 @@ const PricingCard = () => {
           return (
             <Card
               key={plan.id}
-              className={`flex h-full flex-col rounded-2xl border-none shadow-sm ${
+              className={`flex h-full flex-col border border-gray-200  rounded-2xl  shadow-sm ${
                 isActive ? "bg-[#057BFF]" : "bg-white"
               }`}
             >
               {/* Header */}
               <CardHeader className="pb-2">
                 <CardTitle
-                  className={`text-3xl font-semibold ${
+                  className={`text-3xl font-semibold  ${
                     isActive ? "text-white" : "text-[#057BFF]"
                   }`}
                 >
@@ -145,10 +145,10 @@ const PricingCard = () => {
               </CardContent>
 
               {/* Footer */}
-              <CardFooter>
+              <CardFooter className="border-none">
                 <Button
                   variant="outline"
-                  className={`h-9 w-full cursor-pointer text-md font-normal ${
+                  className={`h-9 w-full  cursor-pointer text-md font-normal ${
                     isActive
                       ? "border-white bg-white text-black hover:bg-gray-100"
                       : "border-[#057BFF] bg-[#057BFF] text-white hover:bg-[#057BFF]/90"

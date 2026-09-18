@@ -7,9 +7,9 @@ import { BiCart, BiPurchaseTagAlt } from "react-icons/bi";
 const Right = () => {
   return (
     <div>
-        <header className='flex flex-col  '> 
-            <div className='flex gap-2 text-[#057BFF]'>
-                <span><Users/></span>
+        <header className='flex flex-col mt-2 '> 
+            <div className='flex gap-2 items-center text-[#057BFF]'>
+                <span className='w-8 h-8 rounded-xl flex items-center justify-center bg-[#C2DFFF] text-[#057BFF]'> <Users/></span>
                 <span>TEAM MANAGEMENT</span>
             </div>
 
@@ -23,7 +23,7 @@ const Right = () => {
 
         <div className='flex flex-col gap-3 text-gray-500' >
             <div className='flex gap-2 '>
-                <span><User className='' size={25} /></span>
+                <span ><User className='' size={25} /></span>
                 <span>Role-based access</span>
             </div>
             <div className='flex gap-2'>

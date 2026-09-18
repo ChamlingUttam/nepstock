@@ -4,10 +4,10 @@ import { AlertTriangle, Clock, ShoppingBag } from 'lucide-react'
 
 const Left = () => {
   return (
-    <div>
-        <header className='flex flex-col '> 
-            <div className='flex gap-2 text-[#057BFF]'>
-                <span><ShoppingBag/></span>
+    <div className=''>
+        <header className='flex flex-col mt-2  '> 
+            <div className='flex gap-2 items-center text-[#057BFF]'>
+                <span className='w-8 h-8 rounded-xl flex items-center justify-center bg-[#C2DFFF] text-[#057BFF]'> <ShoppingBag/></span>
                 <span>Stock tracking</span>
             </div>
 
