@@ -65,8 +65,8 @@ export default function ContactPage() {
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
-    mode: "onBlur",       
-    reValidateMode: "onChange", 
+    mode: "onBlur",
+    reValidateMode: "onChange",
   });
 
   const onSubmit = async (data: ContactFormData) => {
@@ -113,28 +113,29 @@ export default function ContactPage() {
         <p className="text-sm font-semibold uppercase tracking-widest text-[#075BFF]">
           Nepal&apos;s #1 Inventory Management Platform
         </p>
+
         <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900 md:text-[56px]">
           Get In Touch{" "}
           <span className="text-[#075BFF]">With Us</span>
         </h1>
+
         <p className="mx-auto mt-4 max-w-xl text-sm text-gray-500 md:text-[15px]">
-          Reach out for inquiries, support, or feedback. Fill out the form,
-          and we&apos;ll get back to you promptly.
+          Reach out for inquiries, support, or feedback. Fill out the form, and
+          we&apos;ll get back to you promptly.
         </p>
       </section>
 
       {/* Form + Map */}
-      <section className="mx-auto max-w-7xl px-4 pb-16 md:px-12">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <section className="mx-auto max-w-[1400px] px-4 pb-16 md:px-0">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[3fr_2fr]">
 
           {/* ── Contact Form ── */}
-          <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+          <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-s">
             <form
               onSubmit={handleSubmit(onSubmit)}
               noValidate
               className="space-y-5"
             >
-              {/* Inline validation summary (only after first submit attempt) */}
               {hasErrors && (
                 <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3">
                   <p className="text-sm font-semibold text-red-600">
@@ -145,7 +146,11 @@ export default function ContactPage() {
 
               {/* First + Last Name */}
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                <Field label="First Name" error={errors.firstName?.message} required>
+                <Field
+                  label="First Name"
+                  error={errors.firstName?.message}
+                  required
+                >
                   <input
                     id="firstName"
                     type="text"
@@ -155,7 +160,11 @@ export default function ContactPage() {
                   />
                 </Field>
 
-                <Field label="Last Name" error={errors.lastName?.message} required>
+                <Field
+                  label="Last Name"
+                  error={errors.lastName?.message}
+                  required
+                >
                   <input
                     id="lastName"
                     type="text"
@@ -182,7 +191,11 @@ export default function ContactPage() {
                   />
                 </Field>
 
-                <Field label="Email" error={errors.email?.message} required>
+                <Field
+                  label="Email"
+                  error={errors.email?.message}
+                  required
+                >
                   <input
                     id="email"
                     type="email"
@@ -194,7 +207,11 @@ export default function ContactPage() {
               </div>
 
               {/* Message */}
-              <Field label="Message" error={errors.message?.message} required>
+              <Field
+                label="Message"
+                error={errors.message?.message}
+                required
+              >
                 <textarea
                   id="message"
                   rows={5}
@@ -238,6 +255,7 @@ export default function ContactPage() {
                       />
                     </svg>
                   )}
+
                   {submitStatus.message}
                 </div>
               )}
@@ -279,7 +297,7 @@ export default function ContactPage() {
           </div>
 
           {/* ── Map — Itahari Chowk ── */}
-          <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm">
+          <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-s">
             <iframe
               title="Itahari Chowk, Sunsari, Nepal"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.177944985937!2d87.27373857441983!3d26.664200076814564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef75e63a0fc0cb%3A0xf1fe8aefbfb3cd97!2sItahari%20Chowk!5e0!3m2!1sen!2snp!4v1726000000000!5m2!1sen!2snp"
