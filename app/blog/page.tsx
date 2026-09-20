@@ -11,7 +11,7 @@ const staticBlogs = [
     short_description:
       "In today's digital world, having a proper inventory management system for businesses is no longer optional—it's essential.",
     image: "/api/blog-image",
-    Author: { name: "Aakash Chaudhary" },
+    Author: { name: "Lija Niraula" },
     created_at: "2026-04-11T00:00:00.000Z",
   },
   {
@@ -21,7 +21,7 @@ const staticBlogs = [
     short_description:
       "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
     image: "/api/blog-image",
-    Author: { name: "Aakash Chaudhary" },
+    Author: { name: "Lija Niraula" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
   {
@@ -31,7 +31,7 @@ const staticBlogs = [
     short_description:
       "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
     image: "/api/blog-image",
-    Author: { name: "Aakash Chaudhary" },
+    Author: { name: "Lija Niraula" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
   {
@@ -41,7 +41,7 @@ const staticBlogs = [
     short_description:
       "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
     image: "/api/blog-image",
-    Author: { name: "Aakash Chaudhary" },
+    Author: { name: "Lija Niraula" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
   {
@@ -51,7 +51,7 @@ const staticBlogs = [
     short_description:
       "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
     image: "/api/blog-image",
-    Author: { name: "Aakash Chaudhary" },
+    Author: { name: "Lija Niraula" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
   {
@@ -61,7 +61,7 @@ const staticBlogs = [
     short_description:
       "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
     image: "/api/blog-image",
-    Author: { name: "Aakash Chaudhary" },
+    Author: { name: "Lija Niraula" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
 ];
@@ -71,20 +71,20 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Header Section */}
-      <section className="mx-auto max-w-7xl px-4 py-12 text-center md:px-12 lg:py-16">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 md:text-[56px]">
-          Our Blog <span className="text-[#075BFF]">Page</span>
-        </h1>
+        {/* Header Section */}
+          <section className="mx-auto max-w-7xl px-4 pt-12 text-center md:px-12 lg:pt-16">
+            <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 md:text-[56px]">
+              Our Blog <span className="text-[#075BFF]">Page</span>
+            </h1>
 
-        <p className="mx-auto max-w-2xl text-sm text-gray-500 md:text-[15px]">
-          Reach out for inquiries, support, or feedback. Fill out the form,
-          and we&apos;ll get back to you promptly.
-        </p>
-      </section>
+            <p className="mx-auto mb-8 whitespace-nowrap text-sm text-gray-500 md:text-[15px]">
+              Reach out for inquiries, support, or feedback. Fill out the form, and
+              we&apos;ll get back to you promptly.
+            </p>
+          </section>
 
-      {/* Blog Grid */}
-      <section className="mx-auto max-w-[1400px] px-4 pb-16 md:px-0">
+        {/* Blog Grid */}
+        <section className="mx-auto max-w-[1400px] px-4 pb-16 md:px-0">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map((blog) => (
             <Link
@@ -108,7 +108,7 @@ export default function BlogPage() {
 
               {/* Blog Content */}
               <div className="flex flex-col p-5">
-                <h3 className="mb-3 line-clamp-2 text-[19px] font-bold leading-[1.3] tracking-tight text-gray-900 transition-colors group-hover:text-[#075BFF]">
+                <h3 className="mb-3 line-clamp-2 text-[19px] font-semibold leading-[1.3] tracking-tight text-gray-900 transition-colors group-hover:text-[#075BFF]">
                   {blog.title}
                 </h3>
 
@@ -156,3 +156,4 @@ export default function BlogPage() {
     </main>
   );
 }
+

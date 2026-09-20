@@ -20,7 +20,7 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-sm font-medium text-gray-700">
+      <label className="text-[18px] font-normal leading-7 tracking-[-0.03em] text-[#475569]">
         {label}
         {required && <span className="ml-0.5 text-red-500">*</span>}
       </label>
@@ -305,7 +305,6 @@ export default function ContactPage() {
             </form>
           </div>
 
-          {/* ── Map — Itahari Chowk ── */}
           <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-s">
             <iframe
               title="Itahari Chowk, Sunsari, Nepal"

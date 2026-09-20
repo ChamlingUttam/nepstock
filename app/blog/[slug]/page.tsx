@@ -20,7 +20,7 @@ const staticBlogs = [
     slug: "why-every-business-needs-inventory-management",
     title:
       "Why Every Business in Nepal Needs an Inventory Management System in 2026",
-    author: "Aakash Chaudhary",
+    author: "Lija Niraula",
     date: "Apr 11, 2026",
     image: "/api/blog-image",
     content: `
@@ -40,7 +40,7 @@ const staticBlogs = [
   {
     slug: "why-every-hotel-needs-website",
     title: "Why Every Hotel Needs a Professional Website in 2026?",
-    author: "Aakash Chaudhary",
+    author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
     content: hotelBlogContent,
@@ -48,7 +48,7 @@ const staticBlogs = [
   {
     slug: "why-every-hotel-needs-website-2",
     title: "Why Every Hotel Needs a Professional Website in 2026?",
-    author: "Aakash Chaudhary",
+    author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
     content: hotelBlogContent,
@@ -56,7 +56,7 @@ const staticBlogs = [
   {
     slug: "why-every-hotel-needs-website-3",
     title: "Why Every Hotel Needs a Professional Website in 2026?",
-    author: "Aakash Chaudhary",
+    author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
     content: hotelBlogContent,
@@ -64,7 +64,7 @@ const staticBlogs = [
   {
     slug: "why-every-hotel-needs-website-4",
     title: "Why Every Hotel Needs a Professional Website in 2026?",
-    author: "Aakash Chaudhary",
+    author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
     content: hotelBlogContent,
@@ -72,7 +72,7 @@ const staticBlogs = [
   {
     slug: "why-every-hotel-needs-website-5",
     title: "Why Every Hotel Needs a Professional Website in 2026?",
-    author: "Aakash Chaudhary",
+    author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
     content: hotelBlogContent,
