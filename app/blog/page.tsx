@@ -84,7 +84,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Grid */}
-      <section className="mx-auto max-w-7xl px-4 pb-16 md:px-12">
+      <section className="mx-auto max-w-[1400px] px-4 pb-16 md:px-0">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map((blog) => (
             <Link
