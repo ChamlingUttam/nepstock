@@ -4,17 +4,18 @@ import { Button } from "../ui/button";
 const TailSection = () => {
   return (
     <div className="flex w-full justify-center px-4 pb-10 sm:px-6 md:px-10 lg:px-16 xl:px-20">
-      <section className="flex w-full max-w-[1600px] flex-col items-center justify-center rounded-2xl bg-[#E6F2FF] px-5 py-10 text-center sm:px-8 sm:py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
+      <section className="flex h-[439px] w-full max-w-[1500px] flex-col items-center justify-center rounded-2xl bg-[#E6F2FF] px-5 text-center sm:px-8 md:px-12 lg:px-16">
         <p className="text-sm font-semibold text-[#075BFF] sm:text-base">
           NEPAL&apos;S #1 INVENTORY MANAGEMENT PLATFORM
         </p>
 
-        <h1 className="mt-4 text-3xl font-bold text-black sm:text-4xl md:text-5xl lg:text-6xl">
-          Ready to Transform <br />
-          Your Business?
+       <h1 className="mt-5.5 text-4xl font-bold text-black sm:text-4xl md:text-5xl lg:text-6xl">
+          Ready to Transform
+          <br />
+          <span className="mt-7 inline-block">Your Business?</span>
         </h1>
 
-        <p className="mt-4 max-w-2xl text-sm font-medium leading-6 text-gray-400 sm:text-base">
+        <p className="mt-6.5 max-w-3xl text-sm font-light leading-6 text-gray-800 sm:text-base">
           Join hundreds of Nepali businesses who transformed their
           <br className="hidden sm:block" />
           inventory management with StockNep
