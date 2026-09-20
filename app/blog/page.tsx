@@ -6,6 +6,16 @@ import Image from "next/image";
 const staticBlogs = [
   {
     id: 1,
+    slug: "why-every-business-needs-inventory-management",
+    title: "Why Every Business in Nepal Needs an Inventory Management System in 2026",
+    short_description:
+      "In today's digital world, having a proper inventory management system for businesses is no longer optional—it's essential.",
+    image: "/api/blog-image",
+    Author: { name: "Aakash Chaudhary" },
+    created_at: "2026-04-11T00:00:00.000Z",
+  },
+  {
+    id: 2,
     slug: "why-every-hotel-needs-website",
     title: "Why Every Hotel Needs a Professional Website in 2026?",
     short_description:
@@ -15,7 +25,7 @@ const staticBlogs = [
     created_at: "2026-08-18T00:00:00.000Z",
   },
   {
-    id: 2,
+    id: 3,
     slug: "why-every-hotel-needs-website-2",
     title: "Why Every Hotel Needs a Professional Website in 2026?",
     short_description:
@@ -24,17 +34,6 @@ const staticBlogs = [
     Author: { name: "Aakash Chaudhary" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
-  {
-    id: 3,
-    slug: "why-every-hotel-needs-website-3",
-    title: "Why Every Hotel Needs a Professional Website in 2026?",
-    short_description:
-      "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
-    image: "/api/blog-image",
-    Author: { name: "Aakash Chaudhary" },
-    created_at: "2026-08-18T00:00:00.000Z",
-  },
-
   {
     id: 4,
     slug: "why-every-hotel-needs-website-3",
@@ -45,10 +44,9 @@ const staticBlogs = [
     Author: { name: "Aakash Chaudhary" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
-
-   {
+  {
     id: 5,
-    slug: "why-every-hotel-needs-website-3",
+    slug: "why-every-hotel-needs-website-4",
     title: "Why Every Hotel Needs a Professional Website in 2026?",
     short_description:
       "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
@@ -56,10 +54,9 @@ const staticBlogs = [
     Author: { name: "Aakash Chaudhary" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
-
-   {
+  {
     id: 6,
-    slug: "why-every-hotel-needs-website-3",
+    slug: "why-every-hotel-needs-website-5",
     title: "Why Every Hotel Needs a Professional Website in 2026?",
     short_description:
       "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
@@ -67,7 +64,6 @@ const staticBlogs = [
     Author: { name: "Aakash Chaudhary" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
-
 ];
 
 export default function BlogPage() {
@@ -83,7 +79,7 @@ export default function BlogPage() {
 
         <p className="mx-auto max-w-2xl text-sm text-gray-500 md:text-[15px]">
           Reach out for inquiries, support, or feedback. Fill out the form,
-          and we'll get back to you promptly.
+          and we&apos;ll get back to you promptly.
         </p>
       </section>
 
@@ -100,11 +96,11 @@ export default function BlogPage() {
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#EAE8EC]">
                 {blog.image ? (
                   <Image
-                src={blog.image}
-                  alt={blog.title}
-                  fill
-                  className="object-contain mix-blend-multiply"
-                />
+                    src={blog.image}
+                    alt={blog.title}
+                    fill
+                    className="object-contain mix-blend-multiply"
+                  />
                 ) : (
                   <div className="h-full w-full bg-[#EAE8EC]" />
                 )}
