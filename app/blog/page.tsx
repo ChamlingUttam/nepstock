@@ -3,75 +3,150 @@ import { User, Calendar } from "lucide-react";
 import TailSection from "@/components/common/TailSection";
 import Image from "next/image";
 
-async function getBlogs() {
-  const res = await fetch("https://stocknep.product-api.hamroyouthit.com/api/v1/public/blog", {
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) {
-    return null;
-  }
-  return res.json();
-}
+const staticBlogs = [
+  {
+    id: 1,
+    slug: "why-every-hotel-needs-website",
+    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    short_description:
+      "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
+    image: "/api/blog-image",
+    Author: { name: "Aakash Chaudhary" },
+    created_at: "2026-08-18T00:00:00.000Z",
+  },
+  {
+    id: 2,
+    slug: "why-every-hotel-needs-website-2",
+    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    short_description:
+      "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
+    image: "/api/blog-image",
+    Author: { name: "Aakash Chaudhary" },
+    created_at: "2026-08-18T00:00:00.000Z",
+  },
+  {
+    id: 3,
+    slug: "why-every-hotel-needs-website-3",
+    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    short_description:
+      "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
+    image: "/api/blog-image",
+    Author: { name: "Aakash Chaudhary" },
+    created_at: "2026-08-18T00:00:00.000Z",
+  },
 
-export default async function BlogPage() {
-  const data = await getBlogs();
-  const blogs = data?.data?.data || [];
+  {
+    id: 4,
+    slug: "why-every-hotel-needs-website-3",
+    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    short_description:
+      "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
+    image: "/api/blog-image",
+    Author: { name: "Aakash Chaudhary" },
+    created_at: "2026-08-18T00:00:00.000Z",
+  },
+
+   {
+    id: 5,
+    slug: "why-every-hotel-needs-website-3",
+    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    short_description:
+      "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
+    image: "/api/blog-image",
+    Author: { name: "Aakash Chaudhary" },
+    created_at: "2026-08-18T00:00:00.000Z",
+  },
+
+   {
+    id: 6,
+    slug: "why-every-hotel-needs-website-3",
+    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    short_description:
+      "In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential.",
+    image: "/api/blog-image",
+    Author: { name: "Aakash Chaudhary" },
+    created_at: "2026-08-18T00:00:00.000Z",
+  },
+
+];
+
+export default function BlogPage() {
+  const blogs = staticBlogs;
 
   return (
     <main className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="mx-auto max-w-7xl px-4 py-12 md:px-12 lg:py-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <section className="mx-auto max-w-7xl px-4 py-12 text-center md:px-12 lg:py-16">
+        <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 md:text-[56px]">
           Our Blog <span className="text-[#075BFF]">Page</span>
         </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-          Reach out for inquiries, support, or feedback. Fill out the form, and we'll get back to you promptly.
+
+        <p className="mx-auto max-w-2xl text-sm text-gray-500 md:text-[15px]">
+          Reach out for inquiries, support, or feedback. Fill out the form,
+          and we'll get back to you promptly.
         </p>
       </section>
 
       {/* Blog Grid */}
-      <section className="mx-auto max-w-7xl px-4 md:px-12 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map((blog: any) => (
-            <Link key={blog.id} href={`/blog/${blog.slug}`} className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white hover:shadow-lg transition-shadow duration-300">
-              <div className="aspect-[4/3] w-full bg-[#F3F2F7] relative overflow-hidden">
+      <section className="mx-auto max-w-7xl px-4 pb-16 md:px-12">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {blogs.map((blog) => (
+            <Link
+              key={blog.id}
+              href={`/blog/${blog.slug}`}
+              className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+            >
+              {/* Blog Image */}
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#EAE8EC]">
                 {blog.image ? (
-                  <img
-                    src={`https://stocknep.product-api.hamroyouthit.com${blog.image}`}
-                    alt={blog.title}
-                    className="h-full w-full object-cover"
-                  />
+                  <Image
+                src={blog.image}
+                  alt={blog.title}
+                  fill
+                  className="object-contain mix-blend-multiply"
+                />
                 ) : (
-                  <div className="h-full w-full bg-[#F3F2F7]" />
+                  <div className="h-full w-full bg-[#EAE8EC]" />
                 )}
               </div>
-              <div className="flex flex-col flex-grow p-6">
-                <h3 className="mb-3 text-[18px] leading-snug font-bold text-gray-900 line-clamp-2 group-hover:text-[#075BFF] transition-colors">
+
+              {/* Blog Content */}
+              <div className="flex flex-col p-5">
+                <h3 className="mb-3 line-clamp-2 text-[19px] font-bold leading-[1.3] tracking-tight text-gray-900 transition-colors group-hover:text-[#075BFF]">
                   {blog.title}
                 </h3>
-                <p className="mb-6 text-[14px] leading-relaxed text-gray-500 line-clamp-3">
+
+                <p className="mb-5 line-clamp-3 text-[15px] leading-relaxed text-gray-500">
                   {blog.short_description}
                 </p>
-                
-                <div className="mt-auto flex items-center gap-5 text-[13px] font-medium text-gray-500 border-t border-gray-100 pt-5">
+
+                {/* Author & Date */}
+                <div className="flex items-center gap-4 border-t border-gray-100 pt-4 text-[13px] font-medium text-gray-500">
                   <div className="flex items-center gap-2">
                     <User className="h-4 w-4" />
-                    <span>{blog.Author?.name || "Aakash Chaudhary"}</span>
+                    <span>
+                      {blog.Author?.name || "Aakash Chaudhary"}
+                    </span>
                   </div>
+
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
                     <span>
-                      {new Date(blog.created_at).toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
+                      {new Date(blog.created_at).toLocaleDateString(
+                        "en-US",
+                        {
+                          month: "short",
+                          day: "numeric",
+                          year: "numeric",
+                        }
+                      )}
                     </span>
                   </div>
                 </div>
               </div>
             </Link>
           ))}
+
           {blogs.length === 0 && (
             <div className="col-span-full py-12 text-center text-gray-500">
               No blogs found.
