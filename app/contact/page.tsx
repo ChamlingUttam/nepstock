@@ -70,39 +70,47 @@ export default function ContactPage() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    setSubmitStatus({ type: null, message: "" });
+  setSubmitStatus({ type: null, message: "" });
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+  if (!/^\d{10}$/.test(data.phoneNumber)) {
+    setSubmitStatus({
+      type: "error",
+      message: "Phone number must be exactly 10 digits.",
+    });
+    return;
+  }
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+      setSubmitStatus({
+        type: "success",
+        message:
+          result.message ||
+          "Your message has been sent! We'll get back to you soon.",
       });
-
-      const result = await res.json();
-
-      if (result.success) {
-        setSubmitStatus({
-          type: "success",
-          message:
-            result.message ||
-            "Your message has been sent! We'll get back to you soon.",
-        });
-        reset();
-      } else {
-        setSubmitStatus({
-          type: "error",
-          message:
-            result.message || "Something went wrong. Please try again.",
-        });
-      }
-    } catch {
+      reset();
+    } else {
       setSubmitStatus({
         type: "error",
-        message: "Network error. Please check your connection and try again.",
+        message:
+          result.message || "Something went wrong. Please try again.",
       });
     }
-  };
+  } catch {
+    setSubmitStatus({
+      type: "error",
+      message: "Network error. Please check your connection and try again.",
+    });
+  }
+};
 
   const hasErrors = Object.keys(errors).length > 0;
 
@@ -118,8 +126,7 @@ export default function ContactPage() {
           Get In Touch{" "}
           <span className="text-[#075BFF]">With Us</span>
         </h1>
-
-        <p className="mx-auto mt-4 max-w-xl text-sm text-gray-500 md:text-[15px]">
+        <p className="mx-auto mt-4 whitespace-nowrap text-sm text-gray-500 md:text-[15px]">
           Reach out for inquiries, support, or feedback. Fill out the form, and
           we&apos;ll get back to you promptly.
         </p>
@@ -183,12 +190,14 @@ export default function ContactPage() {
                   required
                 >
                   <input
-                    id="phoneNumber"
-                    type="tel"
-                    placeholder="977-9769895191"
-                    {...register("phoneNumber")}
-                    className={inputCls(!!errors.phoneNumber)}
-                  />
+                id="phoneNumber"
+                type="tel"
+                inputMode="numeric"
+                maxLength={10}
+                placeholder="Enter 10 digit phone number"
+                {...register("phoneNumber")}
+                className={inputCls(!!errors.phoneNumber)}
+              />
                 </Field>
 
                 <Field
