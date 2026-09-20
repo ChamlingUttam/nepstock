@@ -133,7 +133,7 @@ export default function ContactPage() {
       </section>
 
       {/* Form + Map */}
-      <section className="mx-auto max-w-[1400px] px-4 pb-16 md:px-0">
+      <section className="mx-auto max-w-[1400px] px-4 pb-0 md:px-0">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[3fr_2fr]">
 
           {/* ── Contact Form ── */}
@@ -319,8 +319,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
+       <div className="pt-10">
       <TailSection />
+      </div>
     </main>
   );
 }

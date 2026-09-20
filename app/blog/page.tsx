@@ -64,6 +64,7 @@ const staticBlogs = [
     Author: { name: "Lija Niraula" },
     created_at: "2026-08-18T00:00:00.000Z",
   },
+  
 ];
 
 export default function BlogPage() {
@@ -84,7 +85,7 @@ export default function BlogPage() {
           </section>
 
         {/* Blog Grid */}
-        <section className="mx-auto max-w-[1400px] px-4 pb-16 md:px-0">
+        <section className="mx-auto max-w-[1400px] px-4 pb-0 md:px-0">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map((blog) => (
             <Link
@@ -152,7 +153,10 @@ export default function BlogPage() {
       </section>
 
       {/* CTA Section */}
+      <div className="pt-10">
+
       <TailSection />
+      </div>
     </main>
   );
 }

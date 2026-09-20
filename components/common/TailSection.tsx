@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 const TailSection = () => {
   return (
-    <div className="flex w-full justify-center px-4 py-10 sm:px-6 md:px-10 lg:px-16 xl:px-20">
+    <div className="flex w-full justify-center px-4 pb-10 sm:px-6 md:px-10 lg:px-16 xl:px-20">
       <section className="flex w-full max-w-[1600px] flex-col items-center justify-center rounded-2xl bg-[#E6F2FF] px-5 py-10 text-center sm:px-8 sm:py-12 md:px-12 md:py-14 lg:px-16 lg:py-16">
         <p className="text-sm font-semibold text-[#075BFF] sm:text-base">
           NEPAL&apos;S #1 INVENTORY MANAGEMENT PLATFORM
