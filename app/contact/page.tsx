@@ -127,7 +127,8 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white">
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 pt-[50px] pb-12 text-center md:px-12">
-        <p className="text-sm font-semibold uppercase tracking-widest text-[#075BFF]">
+        <p className="text-[14px] font-semibold uppercase leading-5 tracking-[-0.02em] text-[#075BFF]">
+
           Nepal&apos;s #1 Inventory Management Platform
         </p>
 
@@ -136,7 +137,7 @@ export default function ContactPage() {
           <span className="text-[#075BFF]">With Us</span>
         </h1>
 
-        <p className="mx-auto mt-4 whitespace-nowrap text-sm text-gray-500 md:text-[15px]">
+        <p className="mx-auto mt-5 whitespace-nowrap text-sm text-gray-500 md:text-[15px]">
           Reach out for inquiries, support, or feedback. Fill out the form, and
           we&apos;ll get back to you promptly.
         </p>
