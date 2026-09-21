@@ -5,7 +5,7 @@ const TailSection = () => {
   return (
     <div className="flex w-full justify-center px-4 pb-10 sm:px-6 md:px-10 lg:px-16 xl:px-20">
       <section className="flex h-[439px] w-full max-w-[1500px] flex-col items-center justify-center rounded-2xl bg-[#E6F2FF] px-5 text-center sm:px-8 md:px-12 lg:px-16">
-        <p className="text-sm font-semibold text-[#075BFF] sm:text-base">
+        <p className="text-sm font-semibold text-[#007BFF] sm:text-base">
           NEPAL&apos;S #1 INVENTORY MANAGEMENT PLATFORM
         </p>
 
@@ -22,13 +22,16 @@ const TailSection = () => {
         </p>
 
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
-        <Button className="w-full cursor-pointer bg-[#075BFF] px-8 py-5 text-white hover:bg-[#064dcc] sm:w-auto">
+        <Button
+          variant="outline"
+          className="w-full cursor-pointer border-[#007BFF] px-8 py-5 text-[#007BFF] hover:bg-[#007BFF] hover:text-white sm:w-auto"
+        >
           START FREE TRIAL
         </Button>
 
         <Button
           variant="outline"
-          className="w-full cursor-pointer border-[#075BFF] px-8 py-5 text-[#075BFF] hover:bg-[#075BFF] hover:text-white sm:w-auto"
+          className="w-full cursor-pointer border-[#007BFF] px-8 py-5 text-[#007BFF] hover:bg-[#007BFF] hover:text-white sm:w-auto"
         >
           BOOK A DEMO
         </Button>

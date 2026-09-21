@@ -22,7 +22,6 @@ function Field({
     <div className="flex flex-col gap-1.5">
       <label className="text-[18px] font-normal leading-7 tracking-[-0.03em] text-[#475569]">
         {label}
-        {required && <span className="ml-0.5 text-red-500">*</span>}
       </label>
 
       {children}
@@ -48,7 +47,7 @@ function Field({
 }
 
 const inputCls = (hasError: boolean) =>
-  `w-full rounded-lg border px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-[#075BFF] focus:ring-2 focus:ring-[#075BFF]/20 ${
+  `w-full rounded-lg border px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-[#007BFF] focus:ring-2 focus:ring-[#007BFF]/20 ${
     hasError
       ? "border-red-400 bg-red-50 focus:border-red-500 focus:ring-red-200"
       : "border-gray-200 bg-white"
@@ -127,14 +126,13 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white">
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 pt-[50px] pb-12 text-center md:px-12">
-        <p className="text-[14px] font-semibold uppercase leading-5 tracking-[-0.02em] text-[#075BFF]">
-
+        <p className="text-[14px] font-semibold uppercase leading-5 tracking-[-0.02em] text-[#007BFF]">
           Nepal&apos;s #1 Inventory Management Platform
         </p>
 
         <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900 md:text-[56px]">
           Get In Touch{" "}
-          <span className="text-[#075BFF]">With Us</span>
+          <span className="text-[#007BFF]">With Us</span>
         </h1>
 
         <p className="mx-auto mt-5 whitespace-nowrap text-sm text-gray-500 md:text-[15px]">
@@ -269,7 +267,7 @@ export default function ContactPage() {
                     >
                       <path
                         fillRule="evenodd"
-                        d="M18 10c0 4.418-3.582 8-8 8S2 14.418 2 10s3.582-8 8-8 8 3.582 8 8zm-9 3a1 1 0 102 0 1 1 0 00-2 0zm.25-6.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z"
+                        d="M18 10c0 4.418-3.582 8-8 8S2 14.418 2 10s3.582-8 8-8 8 3.582 8 8zm-9 3a1 1 0 102 0 1 1 0 00-1-1 1 1 0 00-1 1zm.25-6.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z"
                         clipRule="evenodd"
                       />
                     </svg>
@@ -283,7 +281,7 @@ export default function ContactPage() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full cursor-pointer bg-[#075BFF] py-5 text-sm font-semibold uppercase tracking-wider text-white hover:bg-[#064dcc] disabled:opacity-60"
+                className="w-full cursor-pointer bg-[#007BFF] py-5 text-sm font-semibold uppercase tracking-wider text-white hover:bg-[#006fe6] disabled:opacity-60"
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-2">

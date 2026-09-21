@@ -1,158 +1,189 @@
-import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram,FaTiktok, FaWhatsapp} from "react-icons/fa";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
-
 
 export default function Footer() {
   return (
-    <footer className="w-full px-13 py-12 bg-[#075BFF]  text-white">
-      <div className="max-w-7xl mx-auto">
+    <footer className="w-full bg-[#007BFF] px-[62px] py-12 text-white">
+      <div className="w-full">
 
         {/* Main Footer */}
-        <div className="flex flex-col lg:flex-row justify-between gap-10">
+        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
 
-          {/* Left Div */}
-          <div className="flex flex-col max-w-sm">
-
-            {/* Logo */}
-            <span><h1 className="font-bold  mb-4">Stock Nep</h1></span>
-           
-
-            {/* Description */}
-            <p className="text-sm text-gray-200 leading-6">
-             StockNep is a smart inventory management SaaS designed 
-for businesses in Nepal. Track stock, manage sales, generate 
-invoices, and grow faster with confidence.
-            </p>
-
-            {/* Heading */}
-            <h1 className="text-xl font-semibold mt-6">
-              Follow us
+          {/* Left Section */}
+          <div className="max-w-[560px]">
+            <h1 className="mb-7 text-[22px] font-semibold leading-7 tracking-[-0.03em]">
+              Stock Nep
             </h1>
 
+            <p className="max-w-[560px] text-[20px] font-normal leading-[31px] tracking-[-0.03em]">
+              StockNep is a smart inventory management SaaS designed for
+              businesses in Nepal. Track stock, manage sales, generate
+              invoices, and grow faster with confidence.
+            </p>
+
             {/* Social Media */}
-            <div className="flex items-center gap-4 mt-4">
-              <a href="#" className="hover:text-gray-300 transition">
-                <FaFacebook size={20} />
+            <div className="mt-7 flex items-center gap-2">
+              <a
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+              >
+                <FaFacebook size={21} />
               </a>
 
-              <a href="#" className="hover:text-gray-300 transition">
-                <FaInstagram size={20} />
-
+              <a
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+              >
+                <FaInstagram size={21} />
               </a>
 
-              <a href="#" className="hover:text-gray-300 transition">
-                <FaTiktok size={20} />
+              <a
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+              >
+                <FaTiktok size={21} />
               </a>
 
-              <a href="#" className="hover:text-gray-300 transition">
-                <FaWhatsapp size={20} />
+              <a
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+              >
+                <FaWhatsapp size={21} />
               </a>
             </div>
           </div>
 
-          {/* Right Div */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-10 md:gap-8">
+          {/* Right Sections */}
+          <div className="grid grid-cols-2 gap-x-12 gap-y-10 sm:grid-cols-4 lg:min-w-[650px] lg:gap-x-16">
 
             {/* Product */}
             <div>
-              <h2 className="text-lg font-semibold mb-4">
+              <h2 className="mb-5 text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
                 Product
               </h2>
 
-              <ul className="flex flex-col gap-3 text-sm text-gray-200">
+              <ul className="flex flex-col gap-4 text-[14px] font-normal leading-[22px] tracking-[-0.03em] text-[#F1F5F9]">
                 <li>
-                  <Link href="/feature" className="hover:text-white">
+                  <Link href="/feature" className="transition hover:opacity-70">
                     Features
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="pricing" className="hover:text-white">
+                  <Link href="/pricing" className="transition hover:opacity-70">
                     Pricing
                   </Link>
                 </li>
+
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="transition hover:opacity-70">
                     Templates
                   </a>
                 </li>
-               
               </ul>
             </div>
 
             {/* Support */}
             <div>
-              <h2 className="text-lg font-semibold mb-4">
+              <h2 className="mb-5 text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
                 Support
               </h2>
 
-              <ul className="flex flex-col gap-3 text-sm text-gray-200">
-               
+              <ul className="flex flex-col gap-4 text-[14px] font-normal leading-[22px] tracking-[-0.03em] text-[#F1F5F9]">
                 <li>
-                  <Link href="/faqs" className="hover:text-white">
-                    FAQ
+                  <Link href="/faqs" className="transition hover:opacity-70">
+                    FAQs
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/contact" className="hover:text-white">
+                  <Link href="/contact" className="transition hover:opacity-70">
                     Contact
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/blogs" className="hover:text-white">
+                  <Link href="/blog" className="transition hover:opacity-70">
                     Blog
                   </Link>
                 </li>
               </ul>
             </div>
 
-
             {/* Legal */}
-             <div>
-              <h2 className="text-lg font-semibold mb-4">
+            <div>
+              <h2 className="mb-5 text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
                 Legal
               </h2>
 
-              <ul className="flex flex-col gap-3 text-sm text-gray-200">
-                <li className="cursor-pointer">
-                  <Link href={"/privacy-policy"} className="">
-            Privacy Policy
-            </Link>
-                </li>
+              <ul className="flex flex-col gap-4 text-[14px] font-normal leading-[22px] tracking-[-0.03em] text-[#F1F5F9]">
                 <li>
-                  <Link href={"/Term-of-service"} className="">
-            Terms of Service
-            </Link>
+                  <Link
+                    href="/privacy-policy"
+                    className="transition hover:opacity-70"
+                  >
+                    Privacy Policy
+                  </Link>
                 </li>
+
                 <li>
-                   <Link href={"/cookie-policy"} className="">
-            Cookies Policy
-            </Link>
+                  <Link
+                    href="/Term-of-service"
+                    className="transition hover:opacity-70"
+                  >
+                    Terms of Service
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/cookie-policy"
+                    className="transition hover:opacity-70"
+                  >
+                    Cookie Policy
+                  </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Contact Us */}
+            {/* Contact */}
             <div>
-              <h2 className="text-lg font-semibold mb-4">
-                Contact Us
+              <h2 className="mb-5 text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
+                Contact
               </h2>
 
-              <ul className="flex flex-col gap-3 text-sm text-gray-200">
-                <li>
-                  <a href="mailto:hello@example.com" className="hover:text-white">
+              <ul className="flex flex-col gap-4 text-[14px] font-normal leading-[22px] tracking-[-0.03em] text-[#F1F5F9]">
+
+                <li className="flex items-center gap-3">
+                  <Mail className="h-5 w-5 shrink-0" strokeWidth={2} />
+
+                  <a
+                    href="mailto:hello@example.com"
+                    className="transition hover:opacity-70"
+                  >
                     hello@example.com
                   </a>
                 </li>
-                <li>
-                  <a href="tel:+9779800000000" className="hover:text-white">
+
+                <li className="flex items-center gap-3">
+                  <Phone className="h-5 w-5 shrink-0" strokeWidth={2} />
+
+                  <a
+                    href="tel:+9779800000000"
+                    className="transition hover:opacity-70"
+                  >
                     +977 9800000000
                   </a>
                 </li>
-                <li>
-                  Kathmandu, Nepal
+
+                <li className="flex items-center gap-3">
+                  <MapPin className="h-5 w-5 shrink-0" strokeWidth={2} />
+
+                  <span>Kathmandu, Nepal</span>
                 </li>
+
               </ul>
             </div>
 
@@ -160,14 +191,13 @@ invoices, and grow faster with confidence.
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/20 mt-10 pt-6 flex  items-center justify-center font-semibold text-white ">
-        <span> 
-         © 2026 Sajilo Webs. All rights reserved. Powerd by Youth IT
-        </span>
+        <div className="mt-9 border-t border-white/40 pt-5">
+          <p className="text-center text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
+            © 2026 Sajilo Webs. All Rights Reserved. Powered by Youth IT
+          </p>
         </div>
 
       </div>
     </footer>
   );
 }
-
