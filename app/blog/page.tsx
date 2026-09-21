@@ -7,7 +7,8 @@ const staticBlogs = [
   {
     id: 1,
     slug: "why-every-business-needs-inventory-management",
-        title: "Why Every Hotel Needs a Professional Website in 2026?",
+    title:
+      "Why Every Business in Nepal Needs an Inventory Management System in 2026",
     short_description:
       "In today's digital world, having a proper inventory management system for businesses is no longer optional—it's essential.",
     image: "/api/blog-image",
@@ -84,13 +85,13 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Grid */}
-      <section className="mx-auto max-w-[1400px] px-4 pb-0 sm:px-6 md:px-8 lg:px-12">
+      <section className="mx-auto w-full max-w-[1400px] px-4 pb-0 sm:px-6 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map((blog) => (
             <Link
               key={blog.id}
               href={`/blog/${blog.slug}`}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+              className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
             >
               {/* Blog Image */}
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#EAE8EC]">
@@ -99,6 +100,7 @@ export default function BlogPage() {
                     src={blog.image}
                     alt={blog.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-contain mix-blend-multiply"
                   />
                 ) : (
@@ -107,7 +109,7 @@ export default function BlogPage() {
               </div>
 
               {/* Blog Content */}
-              <div className="flex flex-col p-4 sm:p-5">
+              <div className="flex min-w-0 flex-col p-4 sm:p-5">
                 <h3 className="mb-3 line-clamp-2 font-manrope text-xl font-semibold leading-tight tracking-tight text-gray-900 transition-colors group-hover:text-[#007BFF] sm:text-2xl">
                   {blog.title}
                 </h3>
@@ -118,9 +120,9 @@ export default function BlogPage() {
 
                 {/* Author & Date */}
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-gray-100 pt-4 text-xs font-medium text-gray-500 sm:text-sm">
-                  <div className="flex items-center gap-2">
+                  <div className="flex min-w-0 items-center gap-2">
                     <User className="h-4 w-4 shrink-0" />
-                    <span>
+                    <span className="truncate">
                       {blog.Author?.name || "Aakash Chaudhary"}
                     </span>
                   </div>
