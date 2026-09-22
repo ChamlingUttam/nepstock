@@ -5,19 +5,19 @@ import { FaFacebook } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#007BFF] px-[62px] py-12 text-white">
-      <div className="w-full">
+    <footer className="w-full bg-[#087ff5] text-white">
+      <div className="mx-auto w-[90%] py-10 sm:py-12 lg:py-14">
 
         {/* Main Footer */}
-        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
+        <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-12">
 
           {/* Left Section */}
-          <div className="max-w-[560px]">
-            <h1 className="mb-7 text-[22px] font-semibold leading-7 tracking-[-0.03em]">
-              Stock Nep
-            </h1>
+          <div className="w-full">
+            <h2 className="mb-6 text-xl font-semibold leading-7 tracking-tight sm:text-[22px]">
+              StockNep
+            </h2>
 
-            <p className="max-w-[560px] text-[20px] font-normal leading-[31px] tracking-[-0.03em]">
+            <p className="w-full max-w-2xl text-base font-normal leading-7 tracking-[-0.03em] sm:text-lg">
               StockNep is a smart inventory management SaaS designed for
               businesses in Nepal. Track stock, manage sales, generate
               invoices, and grow faster with confidence.
@@ -27,58 +27,71 @@ export default function Footer() {
             <div className="mt-7 flex items-center gap-2">
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+                aria-label="Facebook"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5]"
               >
-                <FaFacebook size={21} />
+                <FaFacebook className="text-lg sm:text-xl" />
               </a>
 
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+                aria-label="Instagram"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5]"
               >
-                <FaInstagram size={21} />
+                <FaInstagram className="text-lg sm:text-xl" />
               </a>
 
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+                aria-label="TikTok"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5]"
               >
-                <FaTiktok size={21} />
+                <FaTiktok className="text-lg sm:text-xl" />
               </a>
 
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+                aria-label="WhatsApp"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5]"
               >
-                <FaWhatsapp size={21} />
+                <FaWhatsapp className="text-lg sm:text-xl" />
               </a>
             </div>
           </div>
 
           {/* Right Sections */}
-          <div className="grid grid-cols-2 gap-x-12 gap-y-10 sm:grid-cols-4 lg:min-w-[650px] lg:gap-x-16">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 sm:gap-x-6 lg:gap-x-8">
 
             {/* Product */}
             <div>
-              <h2 className="mb-5 text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
+              <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
                 Product
-              </h2>
+              </h3>
 
-              <ul className="flex flex-col gap-4 text-[14px] font-normal leading-[22px] tracking-[-0.03em] text-[#F1F5F9]">
+              <ul className="flex flex-col gap-4 text-sm leading-6">
                 <li>
-                  <Link href="/feature" className="transition hover:opacity-70">
+                  <Link
+                    href="/feature"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Features
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/pricing" className="transition hover:opacity-70">
+                  <Link
+                    href="/pricing"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Pricing
                   </Link>
                 </li>
 
                 <li>
-                  <a href="#" className="transition hover:opacity-70">
+                  <a
+                    href="#"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Templates
                   </a>
                 </li>
@@ -87,25 +100,34 @@ export default function Footer() {
 
             {/* Support */}
             <div>
-              <h2 className="mb-5 text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
+              <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
                 Support
-              </h2>
+              </h3>
 
-              <ul className="flex flex-col gap-4 text-[14px] font-normal leading-[22px] tracking-[-0.03em] text-[#F1F5F9]">
+              <ul className="flex flex-col gap-4 text-sm leading-6">
                 <li>
-                  <Link href="/faqs" className="transition hover:opacity-70">
+                  <Link
+                    href="/faqs"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     FAQs
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/contact" className="transition hover:opacity-70">
+                  <Link
+                    href="/contact"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Contact
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/blog" className="transition hover:opacity-70">
+                  <Link
+                    href="/blog"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Blog
                   </Link>
                 </li>
@@ -114,15 +136,15 @@ export default function Footer() {
 
             {/* Legal */}
             <div>
-              <h2 className="mb-5 text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
+              <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
                 Legal
-              </h2>
+              </h3>
 
-              <ul className="flex flex-col gap-4 text-[14px] font-normal leading-[22px] tracking-[-0.03em] text-[#F1F5F9]">
+              <ul className="flex flex-col gap-4 text-sm leading-6">
                 <li>
                   <Link
                     href="/privacy-policy"
-                    className="transition hover:opacity-70"
+                    className="transition-opacity hover:opacity-70"
                   >
                     Privacy Policy
                   </Link>
@@ -131,7 +153,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/Term-of-service"
-                    className="transition hover:opacity-70"
+                    className="transition-opacity hover:opacity-70"
                   >
                     Terms of Service
                   </Link>
@@ -140,7 +162,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/cookie-policy"
-                    className="transition hover:opacity-70"
+                    className="transition-opacity hover:opacity-70"
                   >
                     Cookie Policy
                   </Link>
@@ -150,20 +172,20 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h2 className="mb-5 text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
-                Contact
-              </h2>
+              <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
+                Contact Us
+              </h3>
 
-              <ul className="flex flex-col gap-4 text-[14px] font-normal leading-[22px] tracking-[-0.03em] text-[#F1F5F9]">
+              <ul className="flex flex-col gap-4 text-sm leading-6">
 
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 shrink-0" strokeWidth={2} />
 
                   <a
-                    href="mailto:hello@example.com"
-                    className="transition hover:opacity-70"
+                    href="mailto:hello@sajilows.com"
+                    className="whitespace-nowrap transition-opacity hover:opacity-70"
                   >
-                    hello@example.com
+                    hello@sajilows.com
                   </a>
                 </li>
 
@@ -171,32 +193,32 @@ export default function Footer() {
                   <Phone className="h-5 w-5 shrink-0" strokeWidth={2} />
 
                   <a
-                    href="tel:+9779800000000"
-                    className="transition hover:opacity-70"
+                    href="tel:9746888890"
+                    className="whitespace-nowrap transition-opacity hover:opacity-70"
                   >
-                    +977 9800000000
+                    974-6888890
                   </a>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 shrink-0" strokeWidth={2} />
 
-                  <span>Kathmandu, Nepal</span>
+                  <span className="whitespace-nowrap">
+                    Pragati Chowk, Itahari
+                  </span>
                 </li>
 
               </ul>
             </div>
-
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-9 border-t border-white/40 pt-5">
-          <p className="text-center text-[16px] font-medium uppercase leading-5 tracking-[-0.02em]">
-            © 2026 Sajilo Webs. All Rights Reserved. Powered by Youth IT
+        {/* Bottom Divider */}
+        <div className="mt-10 border-t border-white/70 pt-5 sm:mt-12 sm:pt-6">
+          <p className="text-center text-xs font-semibold uppercase leading-5 tracking-tight sm:text-sm">
+            © 2026 Sajilo Webs. All Rights Reserved. Powerd by Youth IT
           </p>
         </div>
-
       </div>
     </footer>
   );
