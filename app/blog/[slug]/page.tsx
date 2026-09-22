@@ -100,15 +100,19 @@ export default async function SingleBlogPage({
 
   return (
     <main className="min-h-screen bg-white">
-      <article className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 sm:py-10 md:px-8">
+      {/* Back to Blogs */}
+      <div className="mx-auto w-full max-w-[1384px] px-4 pt-6 sm:px-6 sm:pt-8 md:px-8">
         <Link
           href="/blog"
-          className="mb-6 inline-flex items-center text-sm font-medium text-[#075BFF] hover:underline"
+          className="inline-flex cursor-pointer items-center text-sm font-medium text-[#075BFF] hover:underline"
         >
           ← Back to Blogs
         </Link>
+      </div>
 
-        <div className="relative mb-8 aspect-[1384/420] w-full overflow-hidden rounded-[20px] border border-[#D7E2F0] bg-gray-100 sm:mb-10 lg:w-[calc(100vw-32px)] lg:max-w-[1384px] lg:-ml-[calc((1384px-100%)/2)]">
+      {/* Featured Image */}
+      <div className="mx-auto mt-6 w-full max-w-[1384px] px-4 sm:mt-8 sm:px-6 md:px-8">
+        <div className="relative aspect-[1384/420] w-full overflow-hidden rounded-[20px] border border-[#D7E2F0] bg-gray-100">
           <Image
             src={blog.image}
             alt={blog.title}
@@ -117,10 +121,14 @@ export default async function SingleBlogPage({
             className="object-cover"
           />
         </div>
+      </div>
 
+      {/* Blog Content */}
+      <article className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 sm:py-10 md:px-8">
         <h1 className="mb-4 w-full max-w-[900px] font-[Poppins] text-2xl font-semibold leading-8 tracking-[-0.48px] text-gray-900 sm:text-[28px] sm:leading-10 sm:tracking-[-0.56px] md:text-[32px] md:leading-[44px] md:tracking-[-0.64px]">
-  {blog.title}
-</h1>
+          Why Every Business in Nepal Needs an Inventory Management
+          System in 2026
+        </h1>
 
         <div className="mb-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] font-medium">
           <div className="flex items-center gap-1.5 text-[#075BFF]">
@@ -296,4 +304,3 @@ export default async function SingleBlogPage({
     </main>
   );
 }
-
