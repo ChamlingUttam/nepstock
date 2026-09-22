@@ -26,8 +26,10 @@ const MainHeader = () => {
       <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
         <Button
           variant="outline"
-          className="w-full cursor-pointer border-[#007BFF] px-8 py-5 text-[#007BFF] hover:bg-[#007BFF] hover:text-white sm:w-auto"
-        >
+        className="w-full cursor-pointer border-[#007BFF] px-8 py-5 text-[#007BFF] hover:bg-[#007BFF] hover:text-white sm:w-auto">
+
+
+        
           START FREE TRIAL
         </Button>
 
