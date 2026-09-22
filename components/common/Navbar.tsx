@@ -10,8 +10,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Blogs", href: "/blog" },
-    { name: "Contact", href: "/contact" },
-
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -51,7 +50,7 @@ export default function Navbar() {
 
         {/* Desktop Buttons */}
         <div className="ml-auto hidden items-center gap-3 md:flex">
-          <Link href="/login">
+          <Link href="https://app.stocknep.com/auth/login">
             <Button
               variant="ghost"
               className="h-auto cursor-pointer border border-gray-200 bg-white px-4 py-3 text-sm font-semibold uppercase leading-4 tracking-[-0.01em] text-[#475569] hover:bg-white hover:text-[#475569] lg:text-base"
@@ -100,7 +99,10 @@ export default function Navbar() {
           </ul>
 
           <div className="mt-3 flex flex-col gap-3 border-t border-gray-100 pt-4">
-            <Link href="/login" onClick={() => setMenuOpen(false)}>
+            <Link
+              href="https://app.stocknep.com/auth/login"
+              onClick={() => setMenuOpen(false)}
+            >
               <Button
                 variant="ghost"
                 className="w-full cursor-pointer border border-gray-200 bg-white py-3 text-sm font-semibold uppercase text-[#475569] hover:bg-white hover:text-[#475569]"
@@ -109,7 +111,10 @@ export default function Navbar() {
               </Button>
             </Link>
 
-            <Link href="/get-started" onClick={() => setMenuOpen(false)}>
+            <Link
+              href="/get-started"
+              onClick={() => setMenuOpen(false)}
+            >
               <Button className="w-full cursor-pointer bg-[#007BFF] py-3 text-sm font-semibold uppercase text-white hover:bg-[#085bb4]">
                 START FREE TRIAL
               </Button>

@@ -70,7 +70,7 @@ const staticBlogs = [
 ];
 
 const socialButtonClass =
-  "flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 text-gray-600 transition-colors hover:border-[#075BFF] hover:text-[#075BFF]";
+  "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gray-300 text-gray-600 transition-colors hover:border-[#075BFF] hover:text-[#075BFF]";
 
 export default async function SingleBlogPage({
   params,
@@ -100,25 +100,34 @@ export default async function SingleBlogPage({
 
   return (
     <main className="min-h-screen bg-white">
-      <article className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 sm:py-10 md:px-8">
+      {/* Back to Blogs */}
+      <div className="mx-auto w-full max-w-[1384px] px-4 pt-6 sm:px-6 sm:pt-8 md:px-8">
         <Link
           href="/blog"
-          className="mb-6 inline-flex items-center text-sm font-medium text-[#075BFF] hover:underline"
+          className="inline-flex cursor-pointer items-center text-sm font-medium text-[#075BFF] hover:underline"
         >
           ← Back to Blogs
         </Link>
+      </div>
 
-        <div className="relative mb-8 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-gray-100 sm:mb-10">
+      {/* Featured Image */}
+      <div className="mx-auto mt-6 w-full max-w-[1384px] px-4 sm:mt-8 sm:px-6 md:px-8">
+        <div className="relative aspect-[1384/420] w-full overflow-hidden rounded-[20px] border border-[#D7E2F0] bg-gray-100">
           <Image
             src={blog.image}
             alt={blog.title}
             fill
+            priority
             className="object-cover"
           />
         </div>
+      </div>
 
-        <h1 className="mb-4 font-[Poppins] text-2xl font-semibold leading-8 tracking-[-2%] text-gray-900 sm:text-[28px] sm:leading-10 md:text-[32px] md:leading-[44px]">
-          {blog.title}
+      {/* Blog Content */}
+      <article className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 sm:py-10 md:px-8">
+        <h1 className="mb-4 w-full max-w-[900px] font-[Poppins] text-2xl font-semibold leading-8 tracking-[-0.48px] text-gray-900 sm:text-[28px] sm:leading-10 sm:tracking-[-0.56px] md:text-[32px] md:leading-[44px] md:tracking-[-0.64px]">
+          Why Every Business in Nepal Needs an Inventory Management
+          System in 2026
         </h1>
 
         <div className="mb-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] font-medium">
@@ -136,7 +145,7 @@ export default async function SingleBlogPage({
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
 
-            <span className="text-[#075BFF]">{blog.date}</span>
+            <span>{blog.date}</span>
           </div>
 
           <div className="flex items-center gap-1.5 text-[#075BFF]">
@@ -161,14 +170,14 @@ export default async function SingleBlogPage({
 
         <div className="mb-8 mt-3 h-[3px] w-16 rounded-full bg-[#075BFF]" />
 
-                <div
+        <div
           className="
             [&>p]:mb-6
             [&>p]:font-[Poppins]
             [&>p]:text-[18px]
             [&>p]:font-normal
             [&>p]:leading-[28px]
-            [&>p]:tracking-[-3%]
+            [&>p]:tracking-[-0.54px]
             [&>p]:text-gray-700
 
             [&>h2]:mt-8
@@ -196,7 +205,7 @@ export default async function SingleBlogPage({
             [&>ul>li]:text-[18px]
             [&>ul>li]:font-normal
             [&>ul>li]:leading-[28px]
-            [&>ul>li]:tracking-[-3%]
+            [&>ul>li]:tracking-[-0.54px]
             [&>ul>li]:text-gray-700
 
             [&>ol]:mb-5
@@ -208,7 +217,7 @@ export default async function SingleBlogPage({
             [&>ol>li]:text-[18px]
             [&>ol>li]:font-normal
             [&>ol>li]:leading-[28px]
-            [&>ol>li]:tracking-[-3%]
+            [&>ol>li]:tracking-[-0.54px]
             [&>ol>li]:text-gray-700
 
             [&_strong]:font-semibold
@@ -286,7 +295,7 @@ export default async function SingleBlogPage({
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.371.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
             </a>
           </div>
