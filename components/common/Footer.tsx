@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#087ff5] text-white">
+    <footer className="w-full bg-[#007BFF] text-white">
       <div className="mx-auto w-[90%] py-10 sm:py-12 lg:py-14">
 
         {/* Main Footer */}
@@ -28,7 +28,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
               >
                 <FaFacebook className="text-lg sm:text-xl" />
               </a>
@@ -36,7 +36,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
               >
                 <FaInstagram className="text-lg sm:text-xl" />
               </a>
@@ -44,7 +44,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="TikTok"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
               >
                 <FaTiktok className="text-lg sm:text-xl" />
               </a>
@@ -52,7 +52,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="WhatsApp"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
               >
                 <FaWhatsapp className="text-lg sm:text-xl" />
               </a>
