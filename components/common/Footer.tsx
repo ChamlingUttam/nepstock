@@ -5,15 +5,15 @@ import { FaFacebook } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#007BFF] text-white">
+    <footer className="w-full overflow-hidden bg-[#087ff5] text-white">
       <div className="mx-auto w-[90%] py-10 sm:py-12 lg:py-14">
 
         {/* Main Footer */}
-        <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-12">
+        <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-14">
 
           {/* Left Section */}
-          <div className="w-full">
-            <h2 className="mb-6 text-xl font-semibold leading-7 tracking-tight sm:text-[22px]">
+          <div className="w-full min-w-0">
+            <h2 className="mb-6 text-xl font-semibold leading-7 tracking-tight sm:text-2xl">
               StockNep
             </h2>
 
@@ -28,7 +28,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+                className="flex aspect-square w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5] sm:w-11"
               >
                 <FaFacebook className="text-lg sm:text-xl" />
               </a>
@@ -36,7 +36,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+                className="flex aspect-square w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5] sm:w-11"
               >
                 <FaInstagram className="text-lg sm:text-xl" />
               </a>
@@ -44,7 +44,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="TikTok"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+                className="flex aspect-square w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5] sm:w-11"
               >
                 <FaTiktok className="text-lg sm:text-xl" />
               </a>
@@ -52,7 +52,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="WhatsApp"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#007BFF]"
+                className="flex aspect-square w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5] sm:w-11"
               >
                 <FaWhatsapp className="text-lg sm:text-xl" />
               </a>
@@ -63,12 +63,12 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 sm:gap-x-6 lg:gap-x-8">
 
             {/* Product */}
-            <div>
+            <div className="min-w-0">
               <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
                 Product
               </h3>
 
-              <ul className="flex flex-col gap-4 text-sm leading-6">
+              <ul className="flex flex-col gap-4 text-sm leading-6 text-white/95">
                 <li>
                   <Link
                     href="/feature"
@@ -99,12 +99,12 @@ export default function Footer() {
             </div>
 
             {/* Support */}
-            <div>
+            <div className="min-w-0">
               <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
                 Support
               </h3>
 
-              <ul className="flex flex-col gap-4 text-sm leading-6">
+              <ul className="flex flex-col gap-4 text-sm leading-6 text-white/95">
                 <li>
                   <Link
                     href="/faqs"
@@ -135,12 +135,12 @@ export default function Footer() {
             </div>
 
             {/* Legal */}
-            <div>
+            <div className="min-w-0">
               <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
                 Legal
               </h3>
 
-              <ul className="flex flex-col gap-4 text-sm leading-6">
+              <ul className="flex flex-col gap-4 text-sm leading-6 text-white/95">
                 <li>
                   <Link
                     href="/privacy-policy"
@@ -170,52 +170,59 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Contact */}
-            <div>
-              <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
-                Contact Us
-              </h3>
+           {/* Contact */}
+<div className="min-w-0">
+  <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
+    Contact Us
+  </h3>
 
-              <ul className="flex flex-col gap-4 text-sm leading-6">
+  <ul className="flex flex-col gap-4 text-sm leading-6 text-white/95">
+    <li className="flex min-w-0 items-start gap-2 sm:gap-3">
+      <Mail
+        className="mt-0.5 h-5 w-5 shrink-0"
+        strokeWidth={2}
+      />
 
-                <li className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 shrink-0" strokeWidth={2} />
+      <a
+        href="mailto:hello@sajilows.com"
+        className="min-w-0 break-all transition-opacity hover:opacity-70"
+      >
+        hello@sajilows.com
+      </a>
+    </li>
 
-                  <a
-                    href="mailto:hello@sajilows.com"
-                    className="whitespace-nowrap transition-opacity hover:opacity-70"
-                  >
-                    hello@sajilows.com
-                  </a>
-                </li>
+    <li className="flex min-w-0 items-start gap-2 sm:gap-3">
+      <Phone
+        className="mt-0.5 h-5 w-5 shrink-0"
+        strokeWidth={2}
+      />
 
-                <li className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 shrink-0" strokeWidth={2} />
+      <a
+        href="tel:9746888890"
+        className="min-w-0 break-words transition-opacity hover:opacity-70"
+      >
+        974-6888890
+      </a>
+    </li>
 
-                  <a
-                    href="tel:9746888890"
-                    className="whitespace-nowrap transition-opacity hover:opacity-70"
-                  >
-                    974-6888890
-                  </a>
-                </li>
+    <li className="flex min-w-0 items-start gap-2 sm:gap-3">
+      <MapPin
+        className="mt-0.5 h-5 w-5 shrink-0"
+        strokeWidth={2}
+      />
 
-                <li className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 shrink-0" strokeWidth={2} />
-
-                  <span className="whitespace-nowrap">
-                    Pragati Chowk, Itahari
-                  </span>
-                </li>
-
-              </ul>
-            </div>
+      <span className="min-w-0 break-words">
+        Pragati Chowk, Itahari
+      </span>
+    </li>
+  </ul>
+</div>
           </div>
         </div>
 
-        {/* Bottom Divider */}
-        <div className="mt-10 border-t border-white/70 pt-5 sm:mt-12 sm:pt-6">
-          <p className="text-center text-xs font-semibold uppercase leading-5 tracking-tight sm:text-sm">
+        {/* Bottom */}
+        <div className="mt-10 border-t border-white/60 pt-5 sm:mt-12 sm:pt-6">
+          <p className="text-center text-xs font-semibold uppercase leading-5 tracking-tight sm:text-sm lg:text-base">
             © 2026 Sajilo Webs. All Rights Reserved. Powerd by Youth IT
           </p>
         </div>
