@@ -1,173 +1,232 @@
-import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram,FaTiktok, FaWhatsapp} from "react-icons/fa";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
-
 
 export default function Footer() {
   return (
-    <footer className="w-full px-13 py-12 bg-[#075BFF]  text-white">
-      <div className="max-w-7xl mx-auto">
+    <footer className="w-full overflow-hidden bg-[#087ff5] text-white">
+      <div className="mx-auto w-[90%] py-10 sm:py-12 lg:py-14">
 
         {/* Main Footer */}
-        <div className="flex flex-col lg:flex-row justify-between gap-10">
+        <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-14">
 
-          {/* Left Div */}
-          <div className="flex flex-col max-w-sm">
+          {/* Left Section */}
+          <div className="w-full min-w-0">
+            <h2 className="mb-6 text-xl font-semibold leading-7 tracking-tight sm:text-2xl">
+              StockNep
+            </h2>
 
-            {/* Logo */}
-            <span><h1 className="font-bold  mb-4">Stock Nep</h1></span>
-           
-
-            {/* Description */}
-            <p className="text-sm text-gray-200 leading-6">
-             StockNep is a smart inventory management SaaS designed 
-for businesses in Nepal. Track stock, manage sales, generate 
-invoices, and grow faster with confidence.
+            <p className="w-full max-w-2xl text-base font-normal leading-7 tracking-[-0.03em] sm:text-lg">
+              StockNep is a smart inventory management SaaS designed for
+              businesses in Nepal. Track stock, manage sales, generate
+              invoices, and grow faster with confidence.
             </p>
 
-            {/* Heading */}
-            <h1 className="text-xl font-semibold mt-6">
-              Follow us
-            </h1>
-
             {/* Social Media */}
-            <div className="flex items-center gap-4 mt-4">
-              <a href="#" className="hover:text-gray-300 transition">
-                <FaFacebook size={20} />
+            <div className="mt-7 flex items-center gap-2">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="flex aspect-square w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5] sm:w-11"
+              >
+                <FaFacebook className="text-lg sm:text-xl" />
               </a>
 
-              <a href="#" className="hover:text-gray-300 transition">
-                <FaInstagram size={20} />
-
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="flex aspect-square w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5] sm:w-11"
+              >
+                <FaInstagram className="text-lg sm:text-xl" />
               </a>
 
-              <a href="#" className="hover:text-gray-300 transition">
-                <FaTiktok size={20} />
+              <a
+                href="#"
+                aria-label="TikTok"
+                className="flex aspect-square w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5] sm:w-11"
+              >
+                <FaTiktok className="text-lg sm:text-xl" />
               </a>
 
-              <a href="#" className="hover:text-gray-300 transition">
-                <FaWhatsapp size={20} />
+              <a
+                href="#"
+                aria-label="WhatsApp"
+                className="flex aspect-square w-10 items-center justify-center rounded-lg border border-white transition hover:bg-white hover:text-[#087ff5] sm:w-11"
+              >
+                <FaWhatsapp className="text-lg sm:text-xl" />
               </a>
             </div>
           </div>
 
-          {/* Right Div */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-10 md:gap-8">
+          {/* Right Sections */}
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 sm:gap-x-6 lg:gap-x-8">
 
             {/* Product */}
-            <div>
-              <h2 className="text-lg font-semibold mb-4">
+            <div className="min-w-0">
+              <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
                 Product
-              </h2>
+              </h3>
 
-              <ul className="flex flex-col gap-3 text-sm text-gray-200">
+              <ul className="flex flex-col gap-4 text-sm leading-6 text-white/95">
                 <li>
-                  <Link href="/feature" className="hover:text-white">
+                  <Link
+                    href="/feature"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Features
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="pricing" className="hover:text-white">
+                  <Link
+                    href="/pricing"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Pricing
                   </Link>
                 </li>
+
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a
+                    href="#"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Templates
                   </a>
                 </li>
-               
               </ul>
             </div>
 
             {/* Support */}
-            <div>
-              <h2 className="text-lg font-semibold mb-4">
+            <div className="min-w-0">
+              <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
                 Support
-              </h2>
+              </h3>
 
-              <ul className="flex flex-col gap-3 text-sm text-gray-200">
-               
+              <ul className="flex flex-col gap-4 text-sm leading-6 text-white/95">
                 <li>
-                  <Link href="/faqs" className="hover:text-white">
-                    FAQ
+                  <Link
+                    href="/faqs"
+                    className="transition-opacity hover:opacity-70"
+                  >
+                    FAQs
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/contact" className="hover:text-white">
+                  <Link
+                    href="/contact"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Contact
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/blogs" className="hover:text-white">
+                  <Link
+                    href="/blog"
+                    className="transition-opacity hover:opacity-70"
+                  >
                     Blog
                   </Link>
                 </li>
               </ul>
             </div>
 
-
             {/* Legal */}
-             <div>
-              <h2 className="text-lg font-semibold mb-4">
+            <div className="min-w-0">
+              <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
                 Legal
-              </h2>
+              </h3>
 
-              <ul className="flex flex-col gap-3 text-sm text-gray-200">
-                <li className="cursor-pointer">
-                  <Link href={"/privacy-policy"} className="">
-            Privacy Policy
-            </Link>
-                </li>
+              <ul className="flex flex-col gap-4 text-sm leading-6 text-white/95">
                 <li>
-                  <Link href={"/Term-of-service"} className="">
-            Terms of Service
-            </Link>
+                  <Link
+                    href="/privacy-policy"
+                    className="transition-opacity hover:opacity-70"
+                  >
+                    Privacy Policy
+                  </Link>
                 </li>
+
                 <li>
-                   <Link href={"/cookie-policy"} className="">
-            Cookies Policy
-            </Link>
+                  <Link
+                    href="/Term-of-service"
+                    className="transition-opacity hover:opacity-70"
+                  >
+                    Terms of Service
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/cookie-policy"
+                    className="transition-opacity hover:opacity-70"
+                  >
+                    Cookie Policy
+                  </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Contact Us */}
-            <div>
-              <h2 className="text-lg font-semibold mb-4">
-                Contact Us
-              </h2>
+           {/* Contact */}
+<div className="min-w-0">
+  <h3 className="mb-5 text-sm font-medium uppercase leading-5 sm:text-base">
+    Contact Us
+  </h3>
 
-              <ul className="flex flex-col gap-3 text-sm text-gray-200">
-                <li>
-                  <a href="mailto:hello@example.com" className="hover:text-white">
-                    hello@example.com
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+9779800000000" className="hover:text-white">
-                    +977 9800000000
-                  </a>
-                </li>
-                <li>
-                  Kathmandu, Nepal
-                </li>
-              </ul>
-            </div>
+  <ul className="flex flex-col gap-4 text-sm leading-6 text-white/95">
+    <li className="flex min-w-0 items-start gap-2 sm:gap-3">
+      <Mail
+        className="mt-0.5 h-5 w-5 shrink-0"
+        strokeWidth={2}
+      />
 
+      <a
+        href="mailto:hello@sajilows.com"
+        className="min-w-0 break-all transition-opacity hover:opacity-70"
+      >
+        hello@sajilows.com
+      </a>
+    </li>
+
+    <li className="flex min-w-0 items-start gap-2 sm:gap-3">
+      <Phone
+        className="mt-0.5 h-5 w-5 shrink-0"
+        strokeWidth={2}
+      />
+
+      <a
+        href="tel:9746888890"
+        className="min-w-0 break-words transition-opacity hover:opacity-70"
+      >
+        974-6888890
+      </a>
+    </li>
+
+    <li className="flex min-w-0 items-start gap-2 sm:gap-3">
+      <MapPin
+        className="mt-0.5 h-5 w-5 shrink-0"
+        strokeWidth={2}
+      />
+
+      <span className="min-w-0 break-words">
+        Pragati Chowk, Itahari
+      </span>
+    </li>
+  </ul>
+</div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/20 mt-10 pt-6 flex  items-center justify-center font-semibold text-white ">
-        <span> 
-         © 2026 Sajilo Webs. All rights reserved. Powerd by Youth IT
-        </span>
+        <div className="mt-10 border-t border-white/60 pt-5 sm:mt-12 sm:pt-6">
+          <p className="text-center text-xs font-semibold uppercase leading-5 tracking-tight sm:text-sm lg:text-base">
+            © 2026 Sajilo Webs. All Rights Reserved. Powerd by Youth IT
+          </p>
         </div>
-
       </div>
     </footer>
   );
 }
-

@@ -22,9 +22,10 @@ function Field({
     <div className="flex flex-col gap-1.5">
       <label className="text-[18px] font-normal leading-7 tracking-[-0.03em] text-[#475569]">
         {label}
-        {required && <span className="ml-0.5 text-red-500">*</span>}
       </label>
+
       {children}
+
       {error && (
         <p className="flex items-center gap-1 text-xs font-medium text-red-500">
           <svg
@@ -34,7 +35,7 @@ function Field({
           >
             <path
               fillRule="evenodd"
-              d="M18 10c0 4.418-3.582 8-8 8S2 14.418 2 10 5.582 2 10 2s8 3.582 8 8zm-9 3a1 1 0 102 0 1 1 0 00-2 0zm.25-6.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z"
+              d="M18 10c0 4.418-3.582 8-8 8S2 14.418 2 10s3.582-8 8-8 8 3.582 8 8zm-9 3a1 1 0 102 0 1 1 0 00-2 0zm.25-6.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z"
               clipRule="evenodd"
             />
           </svg>
@@ -46,7 +47,7 @@ function Field({
 }
 
 const inputCls = (hasError: boolean) =>
-  `w-full rounded-lg border px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-[#075BFF] focus:ring-2 focus:ring-[#075BFF]/20 ${
+  `w-full rounded-lg border px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-[#007BFF] focus:ring-2 focus:ring-[#007BFF]/20 ${
     hasError
       ? "border-red-400 bg-red-50 focus:border-red-500 focus:ring-red-200"
       : "border-gray-200 bg-white"
@@ -56,7 +57,10 @@ export default function ContactPage() {
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
-  }>({ type: null, message: "" });
+  }>({
+    type: null,
+    message: "",
+  });
 
   const {
     register,
@@ -70,63 +74,68 @@ export default function ContactPage() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-  setSubmitStatus({ type: null, message: "" });
+    setSubmitStatus({ type: null, message: "" });
 
-  if (!/^\d{10}$/.test(data.phoneNumber)) {
-    setSubmitStatus({
-      type: "error",
-      message: "Phone number must be exactly 10 digits.",
-    });
-    return;
-  }
-
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-
-    const result = await res.json();
-
-    if (result.success) {
+    if (!/^\d{10}$/.test(data.phoneNumber)) {
       setSubmitStatus({
-        type: "success",
-        message:
-          result.message ||
-          "Your message has been sent! We'll get back to you soon.",
+        type: "error",
+        message: "Phone number must be exactly 10 digits.",
       });
-      reset();
-    } else {
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message:
+            result.message ||
+            "Your message has been sent! We'll get back to you soon.",
+        });
+
+        reset();
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message:
+            result.message || "Something went wrong. Please try again.",
+        });
+      }
+    } catch {
       setSubmitStatus({
         type: "error",
         message:
-          result.message || "Something went wrong. Please try again.",
+          "Network error. Please check your connection and try again.",
       });
     }
-  } catch {
-    setSubmitStatus({
-      type: "error",
-      message: "Network error. Please check your connection and try again.",
-    });
-  }
-};
+  };
 
   const hasErrors = Object.keys(errors).length > 0;
 
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-4 py-12 text-center md:px-12 lg:py-16">
-        <p className="text-sm font-semibold uppercase tracking-widest text-[#075BFF]">
+      <section className="mx-auto max-w-7xl px-4 pt-[50px] pb-12 text-center md:px-12">
+        <p className="text-[14px] font-semibold uppercase leading-5 tracking-[-0.02em] text-[#007BFF]">
           Nepal&apos;s #1 Inventory Management Platform
         </p>
 
         <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900 md:text-[56px]">
           Get In Touch{" "}
-          <span className="text-[#075BFF]">With Us</span>
+          <span className="text-[#007BFF]">With Us</span>
         </h1>
-        <p className="mx-auto mt-4 whitespace-nowrap text-sm text-gray-500 md:text-[15px]">
+
+        <p className="mx-auto mt-5 whitespace-nowrap text-sm text-gray-500 md:text-[15px]">
           Reach out for inquiries, support, or feedback. Fill out the form, and
           we&apos;ll get back to you promptly.
         </p>
@@ -135,8 +144,7 @@ export default function ContactPage() {
       {/* Form + Map */}
       <section className="mx-auto max-w-[1400px] px-4 pb-0 md:px-0">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[3fr_2fr]">
-
-          {/* ── Contact Form ── */}
+          {/* Contact Form */}
           <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-s">
             <form
               onSubmit={handleSubmit(onSubmit)}
@@ -190,14 +198,14 @@ export default function ContactPage() {
                   required
                 >
                   <input
-                id="phoneNumber"
-                type="tel"
-                inputMode="numeric"
-                maxLength={10}
-                placeholder="Enter 10 digit phone number"
-                {...register("phoneNumber")}
-                className={inputCls(!!errors.phoneNumber)}
-              />
+                    id="phoneNumber"
+                    type="tel"
+                    inputMode="numeric"
+                    maxLength={10}
+                    placeholder="Enter 10 digit phone number"
+                    {...register("phoneNumber")}
+                    className={inputCls(!!errors.phoneNumber)}
+                  />
                 </Field>
 
                 <Field
@@ -230,7 +238,7 @@ export default function ContactPage() {
                 />
               </Field>
 
-              {/* Submit status banner */}
+              {/* Submit Status */}
               {submitStatus.type && (
                 <div
                   className={`flex items-start gap-2 rounded-lg border px-4 py-3 text-sm font-medium ${
@@ -259,7 +267,7 @@ export default function ContactPage() {
                     >
                       <path
                         fillRule="evenodd"
-                        d="M18 10c0 4.418-3.582 8-8 8S2 14.418 2 10 5.582 2 10 2s8 3.582 8 8zm-9 3a1 1 0 102 0 1 1 0 00-2 0zm.25-6.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z"
+                        d="M18 10c0 4.418-3.582 8-8 8S2 14.418 2 10s3.582-8 8-8 8 3.582 8 8zm-9 3a1 1 0 102 0 1 1 0 00-1-1 1 1 0 00-1 1zm.25-6.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z"
                         clipRule="evenodd"
                       />
                     </svg>
@@ -269,11 +277,11 @@ export default function ContactPage() {
                 </div>
               )}
 
-              {/* Submit button */}
+              {/* Submit Button */}
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#075BFF] py-3 text-sm font-semibold uppercase tracking-wider text-white hover:bg-[#064dcc] disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full cursor-pointer bg-[#007BFF] py-5 text-sm font-semibold uppercase tracking-wider text-white hover:bg-[#006fe6] disabled:opacity-60"
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-2">
@@ -305,6 +313,7 @@ export default function ContactPage() {
             </form>
           </div>
 
+          {/* Map */}
           <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-s">
             <iframe
               title="Itahari Chowk, Sunsari, Nepal"
@@ -319,8 +328,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-       <div className="pt-10">
-      <TailSection />
+
+      <div className="pt-10">
+        <TailSection />
       </div>
     </main>
   );
