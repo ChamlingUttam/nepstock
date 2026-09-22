@@ -9,7 +9,7 @@ const Tracking = () => {
         <Left />
       </div>
 
-      <div className="flex w-full min-w-0 flex-1 items-center">
+      <div className="flex w-full min-w-0 flex-1 items-center justify-end lg:translate-x-6">
         <Right />
       </div>
     </div>
