@@ -1,45 +1,35 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const blogTitle =
+  "Why Every Business in Nepal Needs an Inventory Management System in 2026";
+
 const hotelBlogContent = `
-  <p>In today's digital world, having a professional website for hotel businesses is no longer optional—it's essential. Travelers increasingly rely on online searches to discover, evaluate, and book hotels. Without a strong online presence, your hotel is essentially invisible to a significant portion of potential guests.</p>
+  <p>When we hear the term "Gen-Z," we remember a massive crowd of youths raising their voices loud, the innocent faces of the Gen-Z martyrs, blood, destruction, and all the chaos. But behind those loud and aggressive protesters, there is a generation that grew up holding deep dissatisfaction with what they see around them. The Gen-Z moments of September 8 and 9 and the generational shift in national politics are changes that we often talk about. But all changes do not need to become headlines. Some revolutions are quiet, yet impactful.</p>
 
-  <p>A professional website serves as the digital front door of your hotel. It is the first impression many guests will have of your property. A well-designed, informative, and visually appealing website can convert visitors into paying guests, while a poorly designed site can drive them away—straight to your competitors.</p>
+  <p>This generation, before or after the protest, always wanted a change. Gen-Z understands global standards, systems, and practices. They try to learn, observe, align, and advance. Gen-Z wants to rewire the sociopolitical systems.<br />They disagree with the traditional benchmarks for success and so-called 'ideal' personality. They choose a career based on passion, not stability. This is a change that our society always needed.</p>
 
-  <p>Direct bookings through your own website eliminate the commission fees charged by online travel agencies (OTAs). By investing in a professional website with an integrated booking engine, hotels can save thousands in commission costs annually, while also collecting valuable guest data for marketing and personalization purposes.</p>
+  <p>The biggest or most impactful change that has been introduced in society is the ability to question. Questioning the system is often taken as disrespect. But now, Nepalese society understands that raising questions is actually the highest form of responsibility. Instead of adjusting, people have begun questioning.<br />Although they have a greater feeling of uncertainty, confusion, and burnout, they hope for betterment. This shows that this generation is highly optimistic. Gen-Z may not have greater knowledge of the political ideologies compared to the preceding generations. But they advocate good governance, transparency, and justice. And basically, this is what truly matters.</p>
 
-  <p>Search engine optimization (SEO) is another critical benefit. A professionally built website optimized for search engines helps your hotel appear in relevant search results when potential guests look for accommodation in your area. This organic visibility is invaluable and can dramatically reduce your dependence on paid advertising.</p>
+  <p>Gen-Z normalizes the issues of mental health. They are more practically redefining the gender roles inside the families. They break the social hierarchy and caste barriers strongly. They promote gradual acceptance of LGBTQ+ identities. This makes society a better place to live for 'everyone.'</p>
 
-  <p>Additionally, a website allows you to showcase your hotel's unique features, amenities, packages, and local experiences. High-quality images, virtual tours, and guest testimonials can build trust and influence booking decisions. Social media integration and a blog can further enhance engagement and keep your audience informed and connected.</p>
+  <p>They replace blind obedience with critical thinking. They believe that respect is earned, not gained as a bonus for authority. They always search for a reason to trust any idea or person and discourage blind faith. This is a vital change that can increase a sense of responsibility in the authorities.</p>
 
-  <p>In conclusion, a professional website is not just a luxury—it is a fundamental business tool that every hotel must invest in to remain competitive, increase direct bookings, and build a loyal customer base in 2026 and beyond.</p>
+  <p>Gen-Z has many flaws, like digital over-dependence, psychological vulnerability, emphasis on individuality, desire for quick results, and so on. But the Gen-Z youths in Nepal are transforming the core of Nepalese households, thinking patterns, and overall civic consciousness. These are the unseen gears of progress—silent, small, and internal—that will eventually lead to a systemic shift in Nepal.</p>
 `;
 
 const staticBlogs = [
   {
     slug: "why-every-business-needs-inventory-management",
-    title:
-      "Why Every Business in Nepal Needs an Inventory Management System in 2026",
+    title: blogTitle,
     author: "Lija Niraula",
     date: "Apr 11, 2026",
     image: "/api/blog-image",
-    content: `
-      <p>When we hear the term "Gen-Z," we remember a massive crowd of youths raising their voices loud, the innocent faces of the Gen-Z martyrs, blood, destruction, and all the chaos. But behind those loud and aggressive protesters, there is a generation that grew up holding deep dissatisfaction with what they see around them. The Gen-Z moments of September 8 and 9 and the generational shift in national politics are changes that we often talk about. But all changes do not need to become headlines. Some revolutions are quiet, yet impactful.</p>
-
-      <p>This generation, before or after the protest, always wanted a change. Gen-Z understands global standards, systems, and practices. They try to learn, observe, align, and advance. Gen-Z wants to rewire the sociopolitical systems.<br />They disagree with the traditional benchmarks for success and so-called 'ideal' personality. They choose a career based on passion, not stability. This is a change that our society always needed.</p>
-
-      <p>The biggest or most impactful change that has been introduced in society is the ability to question. Questioning the system is often taken as disrespect. But now, Nepalese society understands that raising questions is actually the highest form of responsibility. Instead of adjusting, people have begun questioning.<br />Although they have a greater feeling of uncertainty, confusion, and burnout, they hope for betterment. This shows that this generation is highly optimistic. Gen-Z may not have greater knowledge of the political ideologies compared to the preceding generations. But they advocate good governance, transparency, and justice. And basically, this is what truly matters.</p>
-
-      <p>Gen-Z normalizes the issues of mental health. They are more practically redefining the gender roles inside the families. They break the social hierarchy and caste barriers strongly. They promote gradual acceptance of LGBTQ+ identities. This makes society a better place to live for 'everyone.'</p>
-
-      <p>They replace blind obedience with critical thinking. They believe that respect is earned, not gained as a bonus for authority. They always search for a reason to trust any idea or person and discourage blind faith. This is a vital change that can increase a sense of responsibility in the authorities.</p>
-
-      <p>Gen-Z has many flaws, like digital over-dependence, psychological vulnerability, emphasis on individuality, desire for quick results, and so on. But the Gen-Z youths in Nepal are transforming the core of Nepalese households, thinking patterns, and overall civic consciousness. These are the unseen gears of progress—silent, small, and internal—that will eventually lead to a systemic shift in Nepal.</p>
-    `,
+    content: hotelBlogContent,
   },
   {
     slug: "why-every-hotel-needs-website",
-    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    title: blogTitle,
     author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
@@ -47,7 +37,7 @@ const staticBlogs = [
   },
   {
     slug: "why-every-hotel-needs-website-2",
-    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    title: blogTitle,
     author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
@@ -55,7 +45,7 @@ const staticBlogs = [
   },
   {
     slug: "why-every-hotel-needs-website-3",
-    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    title: blogTitle,
     author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
@@ -63,7 +53,7 @@ const staticBlogs = [
   },
   {
     slug: "why-every-hotel-needs-website-4",
-    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    title: blogTitle,
     author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
@@ -71,7 +61,7 @@ const staticBlogs = [
   },
   {
     slug: "why-every-hotel-needs-website-5",
-    title: "Why Every Hotel Needs a Professional Website in 2026?",
+    title: blogTitle,
     author: "Lija Niraula",
     date: "Aug 18, 2026",
     image: "/api/blog-image",
@@ -88,12 +78,13 @@ export default async function SingleBlogPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+
   const blog = staticBlogs.find((blog) => blog.slug === slug);
 
   if (!blog) {
     return (
       <main className="min-h-screen bg-white px-4 py-20 text-center">
-        <h1 className="text-3xl font-bold text-gray-900">
+        <h1 className="font-[Poppins] text-3xl font-semibold text-gray-900">
           Blog not found
         </h1>
 
@@ -109,17 +100,15 @@ export default async function SingleBlogPage({
 
   return (
     <main className="min-h-screen bg-white">
-      <article className="mx-auto max-w-5xl px-4 py-10 md:px-8">
+      <article className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 sm:py-10 md:px-8">
+        <Link
+          href="/blog"
+          className="mb-6 inline-flex items-center text-sm font-medium text-[#075BFF] hover:underline"
+        >
+          ← Back to Blogs
+        </Link>
 
-                <Link
-            href="/blog"
-            className="mb-6 inline-flex items-center text-sm font-medium text-[#075BFF] hover:underline"
-          >
-            ← Back to Blogs
-          </Link>
-
-
-        <div className="relative mb-10 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-gray-100">
+        <div className="relative mb-8 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-gray-100 sm:mb-10">
           <Image
             src={blog.image}
             alt={blog.title}
@@ -128,14 +117,14 @@ export default async function SingleBlogPage({
           />
         </div>
 
-        <h1 className="mb-4 text-2xl font-bold leading-tight text-gray-900 md:text-[32px]">
+        <h1 className="mb-4 font-[Poppins] text-2xl font-semibold leading-8 tracking-[-2%] text-gray-900 sm:text-[28px] sm:leading-10 md:text-[32px] md:leading-[44px]">
           {blog.title}
         </h1>
 
-        <div className="mb-1 flex items-center gap-5 text-[13px] font-medium">
-          <div className="flex items-center gap-1.5 text-[#E63946]">
+        <div className="mb-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] font-medium">
+          <div className="flex items-center gap-1.5 text-[#075BFF]">
             <svg
-              className="h-4 w-4"
+              className="h-4 w-4 shrink-0"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -147,12 +136,12 @@ export default async function SingleBlogPage({
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
 
-            <span className="text-gray-600">{blog.date}</span>
+            <span className="text-[#075BFF]">{blog.date}</span>
           </div>
 
           <div className="flex items-center gap-1.5 text-[#075BFF]">
             <svg
-              className="h-4 w-4"
+              className="h-4 w-4 shrink-0"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -172,32 +161,56 @@ export default async function SingleBlogPage({
 
         <div className="mb-8 mt-3 h-[3px] w-16 rounded-full bg-[#075BFF]" />
 
-        <div
+                <div
           className="
-            [&>p]:mb-5
-            [&>p]:text-[15px]
-            [&>p]:leading-[1.8]
+            [&>p]:mb-6
+            [&>p]:font-[Poppins]
+            [&>p]:text-[18px]
+            [&>p]:font-normal
+            [&>p]:leading-[28px]
+            [&>p]:tracking-[-3%]
             [&>p]:text-gray-700
+
             [&>h2]:mt-8
             [&>h2]:mb-4
+            [&>h2]:font-[Poppins]
             [&>h2]:text-xl
-            [&>h2]:font-bold
+            [&>h2]:font-semibold
+            [&>h2]:leading-8
+            [&>h2]:text-gray-900
+
             [&>h3]:mt-6
             [&>h3]:mb-3
+            [&>h3]:font-[Poppins]
             [&>h3]:text-lg
-            [&>h3]:font-bold
+            [&>h3]:font-semibold
+            [&>h3]:leading-7
+            [&>h3]:text-gray-900
+
             [&>ul]:mb-5
             [&>ul]:list-disc
             [&>ul]:pl-5
+
             [&>ul>li]:mb-2
-            [&>ul>li]:text-[15px]
+            [&>ul>li]:font-[Poppins]
+            [&>ul>li]:text-[18px]
+            [&>ul>li]:font-normal
+            [&>ul>li]:leading-[28px]
+            [&>ul>li]:tracking-[-3%]
             [&>ul>li]:text-gray-700
+
             [&>ol]:mb-5
             [&>ol]:list-decimal
             [&>ol]:pl-5
+
             [&>ol>li]:mb-2
-            [&>ol>li]:text-[15px]
+            [&>ol>li]:font-[Poppins]
+            [&>ol>li]:text-[18px]
+            [&>ol>li]:font-normal
+            [&>ol>li]:leading-[28px]
+            [&>ol>li]:tracking-[-3%]
             [&>ol>li]:text-gray-700
+
             [&_strong]:font-semibold
             [&_a]:text-[#075BFF]
             [&_a]:hover:underline
@@ -207,7 +220,7 @@ export default async function SingleBlogPage({
 
         <div className="mt-10 border-t border-gray-200" />
 
-        <div className="mt-6 flex items-center gap-4">
+        <div className="mt-6 flex flex-wrap items-center gap-4">
           <span className="text-[13px] font-medium text-gray-700">
             Share this Event:
           </span>
@@ -243,7 +256,7 @@ export default async function SingleBlogPage({
               >
                 <path
                   fillRule="evenodd"
-                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.137-.882.3-1.857.344-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
                   clipRule="evenodd"
                 />
               </svg>
@@ -279,7 +292,6 @@ export default async function SingleBlogPage({
           </div>
         </div>
       </article>
-
     </main>
   );
 }

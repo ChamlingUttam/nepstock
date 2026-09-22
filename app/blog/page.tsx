@@ -6,9 +6,8 @@ import Image from "next/image";
 const staticBlogs = [
   {
     id: 1,
-    slug: "why-every-business-needs-inventory-management",
-    title:
-      "Why Every Business in Nepal Needs an Inventory Management System in 2026",
+    slug: "why-every-hotel-needs-website",
+    title: "Why Every Hotel Needs a Professional Website in 2026?",
     short_description:
       "In today's digital world, having a proper inventory management system for businesses is no longer optional—it's essential.",
     image: "/api/blog-image",
